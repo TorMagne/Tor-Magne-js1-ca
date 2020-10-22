@@ -1,0 +1,23 @@
+:root {
+  --blue: #66fcf1;
+  --dark-blue: #34a29e;
+  --black: #0b0c10;
+  --light-black: #1f2833;
+  --grey: #c5c6c7;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background-color: var(--light-black);
+  margin-bottom: 2rem;
+  padding: 0 3rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--blue);
+}
