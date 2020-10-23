@@ -2,7 +2,7 @@ const cardDetails = document.querySelector('.container');
 const queryString = document.location.search;
 const params = new URLSearchParams('queryString');
 const id = params.get('id');
-const url = 'https://api.pokemontcg.io/v1/cards/';
+const url = 'https://api.pokemontcg.io/v1/cards/xy7-10';
 
 console.log(url);
 
