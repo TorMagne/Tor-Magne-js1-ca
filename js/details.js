@@ -20,8 +20,7 @@ async function tcgCard() {
               <p class="card-para">Artist: ${pokemon.artist}</hp>
               <p class="card-para">Set: ${pokemon.set}</p>
               <p class="card-para">Series: ${pokemon.series}</p>
-              <p class="card-para">PokeDex Number: ${pokemon.nationalPokedexNumber}</p>
-              <p class="card-para">Weaknesses: ${pokemon.weaknesses[0].type}</p>
+              <p class="card-para">Number: ${pokemon.number}</p>
             </div>
             </div>`;
   } catch (error) {
