@@ -14,7 +14,7 @@ async function tcgCard() {
     console.log(pokemon);
 
     cardDetails.innerHTML = `<div class="card">
-          <img class="pokemon-card" src="${pokemon.imageUrlHiRes}" alt="pokemon image">
+          <img class="pokemon-card" src="${pokemon.imageUrl}" alt="pokemon image">
             <div class="card-header">
               <h4 class="card-name">${pokemon.name}</h4>
               <p class="card-para">Artist: ${pokemon.artist}</hp>
