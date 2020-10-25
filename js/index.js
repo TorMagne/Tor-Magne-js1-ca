@@ -13,7 +13,7 @@ async function tcg() {
         break;
       }
 
-      container.innerHTML += `<a class="card" href="details.html?=${pokemon[i].id}">
+      container.innerHTML += `<a class="card" href="details.html?id=${pokemon[i].id}">
         <img class="pokemon-card" src="${pokemon[i].imageUrl}" alt="pokemon image">
           <div class="card-header">
             <h4 class="card-name">${pokemon[i].name}</h4>
