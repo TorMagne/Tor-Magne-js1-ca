@@ -1,7 +1,7 @@
 const container = document.querySelector('.container');
 const url = 'https://api.pokemontcg.io/v1/cards';
 
-async function tcg() {
+async function tcgCards() {
   try {
     const response = await fetch(url);
     const json = await response.json();
@@ -23,8 +23,8 @@ async function tcg() {
       `;
     }
   } catch (error) {
-    // console.log(error);
+    console.log(error);
   }
 }
 
-tcg();
+tcgCards();
