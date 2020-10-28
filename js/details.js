@@ -3,6 +3,9 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get('id');
 const url = 'https://api.pokemontcg.io/v1/cards/';
+const loaderContainer = document.querySelector('.loader-container');
+
+cardDetails.innerHTML = `<div class="loader"></div>`;
 
 async function tcgCard() {
   try {
