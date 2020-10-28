@@ -54,6 +54,8 @@ body {
   font-weight: 400;
 }
 
-.hidden {
-  display: none;
+.error {
+  border: 2px solid firebrick;
+  font-size: 2rem;
+  padding: 1rem;
 }

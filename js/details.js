@@ -4,16 +4,15 @@ const params = new URLSearchParams(queryString);
 const id = params.get('id');
 const url = 'https://api.pokemontcg.io/v1/cards/';
 
-console.log(url);
-
 async function tcgCard() {
   try {
     const response = await fetch(url + id);
     const json = await response.json();
     pokemon = json.card;
-    console.log(pokemon);
 
-    cardDetails.innerHTML = `<div class="card">
+    cardDetails.innerHTML = '';
+
+    cardDetails.innerHTML += `<div class="card">
           <img class="pokemon-card" src="${pokemon.imageUrl}" alt="pokemon image">
             <div class="card-header">
               <h4 class="card-name">${pokemon.name}</h4>
@@ -24,7 +23,7 @@ async function tcgCard() {
             </div>
             </div>`;
   } catch (error) {
-    // console.log(error);
+    cardDetails.innerHTML = displayError('An error occured when loading the details of the tcg card');
   }
 }
 

@@ -6,7 +6,8 @@ async function tcgCards() {
     const response = await fetch(url);
     const json = await response.json();
     pokemon = json.cards;
-    console.log(pokemon);
+
+    container.innerHTML = '';
 
     for (let i = 0; i < pokemon.length; i++) {
       if (i === 50) {
@@ -23,7 +24,7 @@ async function tcgCards() {
       `;
     }
   } catch (error) {
-    console.log(error);
+    container.innerHTML = displayError('An error occured when loading the API for all the tcg cards');
   }
 }
 
