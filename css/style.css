@@ -65,6 +65,9 @@ body {
   height: 200px;
   border: 32px solid var(--grey);
   border-top: 32px solid var(--blue);
+  border-right: 32px solid var(--dark-blue);
+  border-bottom: 32px solid var(--blue);
+  border-left: 32px solid var(--dark-blue);
   border-radius: 50%;
   animation: rotate 2s linear infinite;
 }
