@@ -6,6 +6,12 @@
   --grey: #c5c6c7;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .nav {
   display: flex;
   align-items: center;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/nav.css" />
+
+    <link rel="stylesheet" href="css/form.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <h4 class="logo">Pokemon Cards API</h4>
+      </nav>
+    </header>
+
+    <main class="container">
+      <form action="" id="contact-form">
+        <div class="container-items">
+          <label for="Name">Name (required)</label>
+          <input type="text" name="Name" id="Name" />
+          <div class="form-error" id="NameError">Please enter your name</div>
+        </div>
+
+        <div class="container-items">
+          <label for="subject">Subject (required)</label>
+          <input type="text" name="subject" id="subject" />
+          <div class="form-error" id="subjectError">Please enter a subject</div>
+        </div class="container-items">
+
+        <div class="container-items">
+          <label for="email">Email (required)</label>
+          <input type="email" name="email" id="email" />
+          <div class="form-error" id="emailError">Please enter a valid email address</div>
+        </div>
+
+        <div class="container-items">
+          <label for="address">Address (required)</label>
+          <input type="text" name="address" id="address" />
+          <div class="form-error" id="addressError">Please enter a valid address</div>
+        </div>
+
+        <div class="container-items">
+        <button type="submit">Submit</button>
+        </div>  
+      </form>
+    </main>
+  </body>
+</html>
