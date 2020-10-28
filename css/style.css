@@ -61,15 +61,15 @@ body {
 }
 
 .loader {
-  width: 140;
-  height: 140;
-  border: 16px solid var(--grey);
-  border-top: 16px solid var(--blue);
+  width: 200px;
+  height: 200px;
+  border: 32px solid var(--grey);
+  border-top: 32px solid var(--blue);
   border-radius: 50%;
-  animation: spin 2s linear infinite;
+  animation: rotate 2s linear infinite;
 }
 
-@keyframes spin {
+@keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
