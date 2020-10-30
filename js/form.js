@@ -35,6 +35,7 @@ function formValidation(event) {
   } else {
     emailError.style.display = 'block';
   }
+
   // form.reset();
 }
 
