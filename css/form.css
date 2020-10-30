@@ -48,6 +48,7 @@ body {
 }
 
 .form-error {
+  display: none;
   border: 2px solid firebrick;
   margin-top: 1rem;
   padding: 0.5rem;
