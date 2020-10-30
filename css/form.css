@@ -7,7 +7,7 @@ body {
 
 .succsess {
   display: none;
-  border: 2px solid rgb(10, 192, 10);
+  border: 2px solid #2ecc71;
   padding: 1rem;
   font-size: 1.5rem;
 }
@@ -57,7 +57,7 @@ body {
 
 .form-error {
   display: none;
-  color: firebrick;
+  color: #e74c3c;
   margin-top: 0.1rem;
 }
 

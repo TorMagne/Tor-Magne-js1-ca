@@ -35,10 +35,6 @@ function formValidation(event) {
   } else {
     emailError.style.display = 'block';
   }
-
-  if (validateEmail(form.value) === true) {
-    succsess.style.display = 'block';
-  }
   // form.reset();
 }
 
