@@ -2,13 +2,14 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--grey);
+  background-color: rgb(226, 226, 226);
 }
 
 .container {
   display: flex;
   justify-content: center;
   max-width: 600px;
+  min-width: 300px;
   margin: 0 auto;
   background-color: #fff;
   border-radius: 12px;
@@ -31,7 +32,7 @@ body {
   padding: 0.5rem;
   font-size: 1rem;
   outline: none;
-  border: 1px solid black;
+  border: 1px solid rgb(175, 175, 175);
 }
 
 .container-items button {
@@ -50,4 +51,13 @@ body {
   border: 2px solid firebrick;
   margin-top: 1rem;
   padding: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin-bottom: 2rem;
+  }
+  .container-items input {
+    width: 15rem;
+  }
 }
