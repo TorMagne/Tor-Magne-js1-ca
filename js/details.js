@@ -13,8 +13,6 @@ async function tcgCard() {
     const json = await response.json();
     pokemon = json.card;
 
-    console.log(pokemon);
-
     cardDetails.innerHTML = '';
 
     cardDetails.innerHTML += `
