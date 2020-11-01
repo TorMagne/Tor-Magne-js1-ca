@@ -13,9 +13,13 @@ async function tcgCard() {
     const json = await response.json();
     pokemon = json.card;
 
+    console.log(pokemon);
+
     cardDetails.innerHTML = '';
 
-    cardDetails.innerHTML += `<div class="card">
+    cardDetails.innerHTML += `
+        <div class="card">
+        <h1 class="title">${pokemon.name}</h1>
           <img class="pokemon-card" src="${pokemon.imageUrl}" alt="pokemon image">
             <div class="card-header">
               <h4 class="card-name">${pokemon.name}</h4>
@@ -24,7 +28,7 @@ async function tcgCard() {
               <p class="card-para">Series: ${pokemon.series}</p>
               <p class="card-para">Number: ${pokemon.number}</p>
             </div>
-            </div>`;
+          </div>`;
   } catch (error) {
     cardDetails.innerHTML = displayError('An error occured when loading the details of the tcg card');
   }
