@@ -12,6 +12,8 @@ const succsess = document.querySelector('.succsess');
 function formValidation(event) {
   event.preventDefault();
 
+  let validationFailure = true;
+
   if (checkLength(name.value, 0) === true) {
     nameError.style.display = 'none';
   } else {
@@ -36,7 +38,11 @@ function formValidation(event) {
     emailError.style.display = 'block';
   }
 
-  // form.reset();
+  if (validationFailure === true) {
+    succsess.style.display = 'block';
+  } else {
+    succsess.style.display = 'none';
+  }
 }
 
 form.addEventListener('submit', formValidation);
