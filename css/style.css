@@ -12,6 +12,10 @@ body {
   padding: 1rem;
 }
 
+.container a {
+  text-decoration: none;
+}
+
 .title {
   text-align: center;
   margin-bottom: 0.5rem;
@@ -68,6 +72,42 @@ body {
   border-left: 32px solid var(--dark-blue);
   border-radius: 50%;
   animation: rotate 2s linear infinite;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.form-label {
+  display: flex;
+  color: var(--light-black);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#search-pokemon {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  display: flex;
+  width: 100%;
+}
+
+#search-pokemon::placeholder {
+  color: var(--light-black);
+  font-size: 1rem;
+}
+
+.btn {
+  background: var(--light-black);
+  border: none;
+  color: var(--blue);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 1rem;
 }
 
 @keyframes rotate {
