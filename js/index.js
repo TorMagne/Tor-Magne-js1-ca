@@ -1,10 +1,10 @@
 const container = document.querySelector(".container");
-const url = "https://api.pokemontcg.io/v1/cards";
 const loaderContainer = document.querySelector(".loader-container");
 
 container.innerHTML = `<div class="loader"></div>`;
 
 async function tcgCards() {
+  const url = "https://api.pokemontcg.io/v1/cards";
   try {
     const response = await fetch(url);
     const json = await response.json();
@@ -13,10 +13,6 @@ async function tcgCards() {
     container.innerHTML = "";
 
     for (let i = 0; i < pokemon.length; i++) {
-      if (i === 50) {
-        break;
-      }
-
       container.innerHTML += `<a class="card" href="details.html?id=${pokemon[i].id}">
         <img class="pokemon-card" src="${pokemon[i].imageUrl}" alt="pokemon image">
           <div class="card-header">
@@ -40,7 +36,6 @@ const searchCards = (event) => {
   container.innerHTML = "";
   const pokemon = document.querySelector("#search-pokemon").value.trim();
   // console.log(pokemon);
-
   const url = "https://api.pokemontcg.io/v1/cards?name=" + pokemon;
   const getPokemonUrl = async () => {
     try {
@@ -48,6 +43,7 @@ const searchCards = (event) => {
       const json = await response.json();
       pokemonSearch = json.cards;
       console.log(pokemonSearch);
+
       for (let i = 0; i < pokemonSearch.length; i++) {
         container.innerHTML += `<a class="card" href="details.html?id=${pokemonSearch[i].id}">
         <img class="pokemon-card" src="${pokemonSearch[i].imageUrl}" alt="pokemon image">
