@@ -1,10 +1,9 @@
 const container = document.querySelector(".container");
 const loaderContainer = document.querySelector(".loader-container");
-
+const url = "https://api.pokemontcg.io/v1/cards";
 container.innerHTML = `<div class="loader"></div>`;
 
 async function tcgCards() {
-  const url = "https://api.pokemontcg.io/v1/cards";
   try {
     const response = await fetch(url);
     const json = await response.json();
