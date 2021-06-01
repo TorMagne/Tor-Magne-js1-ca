@@ -1,6 +1,6 @@
-const container = document.querySelector('.container');
-const url = 'https://api.pokemontcg.io/v1/cards';
-const loaderContainer = document.querySelector('.loader-container');
+const container = document.querySelector(".container");
+const url = "https://api.pokemontcg.io/v1/cards";
+const loaderContainer = document.querySelector(".loader-container");
 
 container.innerHTML = `<div class="loader"></div>`;
 
@@ -10,7 +10,7 @@ async function tcgCards() {
     const json = await response.json();
     pokemon = json.cards;
 
-    container.innerHTML = '';
+    container.innerHTML = "";
 
     for (let i = 0; i < pokemon.length; i++) {
       if (i === 50) {
@@ -27,7 +27,9 @@ async function tcgCards() {
       `;
     }
   } catch (error) {
-    container.innerHTML = displayError('An error occured when loading the API for all the tcg cards');
+    container.innerHTML = displayError(
+      "An error occured when loading the API for all the tcg cards"
+    );
   }
 }
 
