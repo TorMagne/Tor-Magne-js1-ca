@@ -34,7 +34,7 @@ const searchCards = (event) => {
   event.preventDefault();
   container.innerHTML = "";
   const pokemon = document.querySelector("#search-pokemon").value.trim();
-  // console.log(pokemon);
+
   const url = "https://api.pokemontcg.io/v1/cards?name=" + pokemon;
   const getPokemonUrl = async () => {
     try {
