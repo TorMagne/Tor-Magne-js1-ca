@@ -41,7 +41,6 @@ const searchCards = (event) => {
       const response = await fetch(url);
       const json = await response.json();
       pokemonSearch = json.cards;
-      console.log(pokemonSearch);
 
       for (let i = 0; i < pokemonSearch.length; i++) {
         container.innerHTML += `<a class="card" href="details.html?id=${pokemonSearch[i].id}">
@@ -54,7 +53,9 @@ const searchCards = (event) => {
       `;
       }
     } catch (error) {
-      console.log(error);
+      container.innerHTML = displayError(
+        "An error occured when loading the API for the tcg cards"
+      );
     }
   };
 
